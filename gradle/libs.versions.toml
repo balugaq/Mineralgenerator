@@ -1,0 +1,28 @@
+# Gradle Version Catalog
+
+[versions]
+# Core
+spigot-api = "1.21.6-R0.1-SNAPSHOT"
+slimefun4 = "2025.1" # 原 38953fe13a，JitPack 产物已清理不可解析，2026-11-07 升级
+
+# Shaded
+infinitylib = "1.3.12"
+guizhanlib = "1.1.1"
+
+# Tools
+jsr305 = "3.0.2"
+lombok = "1.18.48" # 原 1.18.34，JDK 26 编译需新版
+
+# Plugins
+shadow = "9.6.1"
+
+[libraries]
+spigot-api = { module = "org.spigotmc:spigot-api", version.ref = "spigot-api" }
+slimefun4 = { module = "com.github.SlimefunGuguProject:Slimefun4", version.ref = "slimefun4" }
+infinitylib = { module = "net.guizhanss:InfinityLib", version.ref = "infinitylib" }
+guizhanlib = { module = "net.guizhanss:GuizhanLib", version.ref = "guizhanlib" }
+jsr305 = { module = "com.google.code.findbugs:jsr305", version.ref = "jsr305" }
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+
+[plugins]
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
